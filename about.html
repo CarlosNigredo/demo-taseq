@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo Placeholder -->
+            <div class="text-2xl font-bold text-gray-900">
+                <span class="text-gray-600">Logo</span>Placeholder
+            </div>
+            
+            <!-- Menu and Language Switch -->
+            <div class="flex items-center space-x-6">
+                <!-- Navigation Menu -->
+                <nav class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                    <a href="index.html" class="hover:text-gray-900 transition-colors duration-300">Item 1</a>
+                    <a href="page2.html" class="hover:text-gray-900 transition-colors duration-300">Item 2</a>
+                    <a href="page3.html" class="text-gray-900 font-bold transition-colors duration-300">Item 3</a>
+                </nav>
+                
+                <!-- Language Toggle -->
+                <div class="flex items-center space-x-2 bg-gray-100 rounded-full p-1">
+                    <button class="px-3 py-1 text-sm rounded-full bg-gray-600 text-white font-semibold shadow-sm transition-colors duration-300">EN</button>
+                    <button class="px-3 py-1 text-sm rounded-full text-gray-500 hover:text-gray-900 transition-colors duration-300">ES</button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-600 hover:text-gray-900 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
+
+        <!-- Section 1: Citation Widget -->
+        <section class="container mx-auto text-center md:text-left py-16">
+            <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8">
+                Detailed insights on our research
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis tortor ac odio fermentum dignissim. Ut a dui non enim feugiat commodo. Fusce vitae arcu ut dolor.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                Reference this document
+            </h3>
+            <p class="text-gray-600 mb-8">
+                Proin sodales odio eget augue varius, eu facilisis neque tristique. Fusce in ex non nisi luctus.
+            </p>
+            
+            <div class="flex flex-col md:flex-row items-start md:space-x-4">
+                <div class="w-full md:w-3/4 flex-shrink-0">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl">
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
+                            <button id="apa-btn" class="citation-btn text-gray-600 font-semibold px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300">APA</button>
+                            <button id="mla-btn" class="citation-btn text-gray-600 font-semibold px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300">MLA</button>
+                            <button id="chicago-btn" class="citation-btn text-gray-600 font-semibold px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300">Chicago</button>
+                        </div>
+                        <div id="citation-display" class="bg-gray-100 p-4 rounded-lg text-gray-800 text-sm italic mb-4">
+                            <!-- Citation will be displayed here -->
+                        </div>
+                        <button id="copy-btn" class="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 text-sm font-semibold">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v12a2 2 0 01-2 2h-1"></path>
+                            </svg>
+                            <span>Copy citation</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 2: Meet the Team -->
+        <section class="container mx-auto py-16">
+            <h3 class="text-3xl font-bold text-gray-900 text-center mb-4">
+                Meet the team
+            </h3>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a felis non nisi luctus hendrerit.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-xl">
+                    <img src="https://placehold.co/150x150/e5e7eb/6b7280?text=Team+Member+1" alt="Team Member 1" class="rounded-full mb-4 w-32 h-32">
+                    <div class="flex space-x-4 mb-4">
+                         <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">John Doe</h4>
+                    <p class="text-sm text-gray-600 mb-2">Lead Developer</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-xl">
+                    <img src="https://placehold.co/150x150/e5e7eb/6b7280?text=Team+Member+2" alt="Team Member 2" class="rounded-full mb-4 w-32 h-32">
+                    <div class="flex space-x-4 mb-4">
+                         <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Jane Smith</h4>
+                    <p class="text-sm text-gray-600 mb-2">UI/UX Designer</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-xl">
+                    <img src="https://placehold.co/150x150/e5e7eb/6b7280?text=Team+Member+3" alt="Team Member 3" class="rounded-full mb-4 w-32 h-32">
+                    <div class="flex space-x-4 mb-4">
+                         <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Peter Jones</h4>
+                    <p class="text-sm text-gray-600 mb-2">Senior Analyst</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-xl">
+                    <img src="https://placehold.co/150x150/e5e7eb/6b7280?text=Team+Member+4" alt="Team Member 4" class="rounded-full mb-4 w-32 h-32">
+                    <div class="flex space-x-4 mb-4">
+                         <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </a>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900">Sarah Lee</h4>
+                    <p class="text-sm text-gray-600 mb-2">Project Manager</p>
+                    <p class="text-xs text-gray-500 leading-relaxed">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <!-- Footer Part 1: Logo & Links -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:space-x-8">
+                <div class="flex-1 max-w-lg mb-8 md:mb-0">
+                    <div class="text-4xl font-bold text-white mb-4">
+                         <span class="text-gray-500">Logo</span>Placeholder
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis tortor ac odio fermentum dignissim. Ut a dui non enim feugiat. Sed a justo sed mi vehicula bibendum nec nec sapien. Sed aliquet, magna ac scelerisque.
+                    </p>
+                </div>
+                
+                <div class="flex-1 mt-4 md:mt-0 md:text-right">
+                    <p class="text-sm leading-relaxed mb-4 md:mb-0">
+                        <!-- Spacer to align with the first line of the text -->
+                        <span class="hidden md:inline">&nbsp;</span>
+                        <a href="https://github.com" class="text-white hover:text-gray-400 transition-colors duration-300">GitHub Repository</a>
+                    </p>
+                    <a href="mailto:contact@example.com" class="text-white hover:text-gray-400 transition-colors duration-300">contact@example.com</a>
+                </div>
+            </div>
+
+            <!-- Footer Part 2: Sponsor Logo -->
+            <div class="flex justify-center items-center py-8">
+                <div class="bg-white rounded-lg p-4 shadow-lg">
+                    <h4 class="text-xl font-bold text-gray-900">Sponsor Logo</h4>
+                </div>
+            </div>
+
+            <!-- Footer Part 3: Copyright & Credits -->
+            <div class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left text-xs text-gray-500 pt-4 border-t border-gray-700">
+                <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+                <p class="my-2 sm:my-0">Design & Development by [Your Name]</p>
+                <p>Last Updated: October 26, 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const citations = {
+            apa: "Author, A. A. (2024). *Title of document*. Retrieved from [URL].",
+            mla: "Author, A. A. *Title of Document*. 26 Oct. 2024, [URL].",
+            chicago: "Author, A. A. “Title of Document.” Accessed October 26, 2024. [URL]."
+        };
+
+        const citationDisplay = document.getElementById('citation-display');
+        const apaBtn = document.getElementById('apa-btn');
+        const mlaBtn = document.getElementById('mla-btn');
+        const chicagoBtn = document.getElementById('chicago-btn');
+        const copyBtn = document.getElementById('copy-btn');
+        
+        function updateCitation(format) {
+            citationDisplay.textContent = citations[format];
+            // Update button styles
+            document.querySelectorAll('.citation-btn').forEach(btn => btn.classList.remove('bg-gray-200', 'text-gray-900', 'font-bold'));
+            document.getElementById(`${format}-btn`).classList.add('bg-gray-200', 'text-gray-900', 'font-bold');
+        }
+
+        apaBtn.addEventListener('click', () => updateCitation('apa'));
+        mlaBtn.addEventListener('click', () => updateCitation('mla'));
+        chicagoBtn.addEventListener('click', () => updateCitation('chicago'));
+
+        copyBtn.addEventListener('click', () => {
+            const textToCopy = citationDisplay.textContent;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+            // Optional: show a confirmation message
+            copyBtn.textContent = 'Copied!';
+            setTimeout(() => {
+                copyBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v12a2 2 0 01-2 2h-1"></path>
+                            </svg>
+                            <span>Copy citation</span>`;
+            }, 2000);
+        });
+
+        // Initial state
+        updateCitation('apa');
+    </script>
+</body>
+</html>
